@@ -17,7 +17,8 @@ class MainTabController: UITabBarController{
   // MARK: - Helpers
   func configureViewControllers(){
     view.backgroundColor = .white
-    let feed = templateNavigationCOntroller(unselectedImage: #imageLiteral(resourceName: "home_unselected"), selectedImage: #imageLiteral(resourceName: "home_selected"), rootViewController: FeedController())
+    let layout = UICollectionViewFlowLayout()
+    let feed = templateNavigationCOntroller(unselectedImage: #imageLiteral(resourceName: "home_unselected"), selectedImage: #imageLiteral(resourceName: "home_selected"), rootViewController: FeedController(collectionViewLayout: layout))
     let search = templateNavigationCOntroller(unselectedImage: #imageLiteral(resourceName: "search_unselected"), selectedImage: #imageLiteral(resourceName: "search_selected"), rootViewController: SearchController())
     let imageUploader = templateNavigationCOntroller(unselectedImage: #imageLiteral(resourceName: "plus_unselected"), selectedImage: #imageLiteral(resourceName: "plus_unselected"), rootViewController: ImageUploadController())
     let notification = templateNavigationCOntroller(unselectedImage: #imageLiteral(resourceName: "like_unselected"), selectedImage: #imageLiteral(resourceName: "like_selected"), rootViewController: NotificationController())
